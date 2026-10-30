@@ -1,10 +1,16 @@
-name: checkout-example
-on: workflow_dispatch
+name: Checkout
+on:
+    push:
+        branches:
+            - main
 
 jobs:
-  checkout:
-    steps:
-     - name: Checkout
-      uses: actions/checkout@v7.0.1
+    checkout:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v7.0.1
+            - name: list
+              run: ls -lha
       
         
