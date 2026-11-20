@@ -1,8 +1,7 @@
 name: Checkout
 on:
-    push:
-        branches:
-            - main
+    workflow_dispatch:
+      
 
 jobs:
     build:
